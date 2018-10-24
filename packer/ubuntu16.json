@@ -2,7 +2,12 @@
     "variables": {
     "Project_id": null,
     "Source_image_family": null,
-	"Machine_type": "f1-micro"
+	"Machine_type": "f1-micro",
+	"Image_description": "Homework_5_Packer",
+	"Disk_type": "pd-standard",
+	"Disk_size": 10,
+	"Network": "packer_network",
+	"Tags": ""
   },
 	"builders": [
         {
@@ -13,7 +18,12 @@
             "source_image_family": "{{user `Source_image_family`}}",
             "zone": "europe-west1-b",
             "ssh_username": "appuser",
-            "machine_type": "{{user  'Machine_type'}}" 
+            "machine_type": "{{user  `Machine_type`}}",
+			"image_description": "{{user `Image_description`}}",
+			"disk_type": "{{user `Disk_type`}}",
+			"disk_size": "{{user `Disk_size`}}",
+			"network": "{{user `Network`}}",
+			"tags": "{{user `Tags`}}"
         }
     ],
     "provisioners": [
