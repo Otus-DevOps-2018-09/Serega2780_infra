@@ -5,8 +5,8 @@
 	"Machine_type": "f1-micro",
 	"Image_description": "Homework_5_Packer",
 	"Disk_type": "pd-standard",
-	"Disk_size": 10,
-	"Network": "packer_network",
+	"Disk_size": "10",
+	"Network": "default",
 	"Tags": ""
   },
 	"builders": [
