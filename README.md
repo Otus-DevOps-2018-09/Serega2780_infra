@@ -2,6 +2,13 @@
 
 Serega2780 Infra repository
 
+Ansible-2
+
+Протестирован режим "один playbook - один сценарий" с переменными, handlers;
+Протестирован режим "один playbook - несколько сценариев";
+Протестирован режим "несколько playbook";
+Provisioning в Packer с режима sh script изменен на Ansible playbook.
+
 Ansible-1
 
 Поскольку командой rm -rf ~/reddit удалили каталог reddit, при следующем запуске 
