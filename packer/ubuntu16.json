@@ -3,6 +3,7 @@
     "Project_id": null,
     "Source_image_family": null,
 	"Machine_type": "f1-micro",
+
 	"Image_description": "Homework_7_Terraform-2",
 	"Disk_type": "pd-standard",
 	"Disk_size": "10",
