@@ -1,0 +1,11 @@
+app:
+  hosts:
+    appserver:
+      ansible_host: 35.195.204.253
+      ansible_python_interpreter: /usr/bin/python3
+db:
+  hosts:
+    dbserver:
+      ansible_host: 35.241.255.215
+      ansible_python_interpreter: /usr/bin/python3
+
