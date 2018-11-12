@@ -10,3 +10,6 @@ jdauphant.nginx
 *.old
 *.log
 old/
+*.retry
+my-infra*
+*.old

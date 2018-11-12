@@ -1,0 +1,3 @@
+- import_playbook: db_dynamic.yml
+- import_playbook: app_dynamic.yml
+- import_playbook: deploy_dynamic.yml
