@@ -9,3 +9,4 @@ my-infra*
 jdauphant.nginx
 *.old
 *.log
+old/
