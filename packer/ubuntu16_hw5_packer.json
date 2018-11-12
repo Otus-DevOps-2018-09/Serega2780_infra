@@ -3,7 +3,7 @@
     "Project_id": null,
     "Source_image_family": null,
 	"Machine_type": "f1-micro",
-	"Image_description": "Homework_7_APP",
+	"Image_description": "Homework_5_Packer",
 	"Disk_type": "pd-standard",
 	"Disk_size": "10",
 	"Network": "default",
@@ -13,7 +13,7 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `Project_id`}}",
-            "image_name": "reddit-app-base",
+            "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
             "source_image_family": "{{user `Source_image_family`}}",
             "zone": "europe-west1-b",
@@ -28,8 +28,14 @@
     ],
     "provisioners": [
         {
-            "type": "ansible",
-            "playbook_file": "ansible/packer_app.yml"
+            "type": "shell",
+            "script": "scripts/install_ruby.sh",
+            "execute_command": "sudo {{.Path}}"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/install_mongodb.sh",
+            "execute_command": "sudo {{.Path}}"
         }
     ]
 }

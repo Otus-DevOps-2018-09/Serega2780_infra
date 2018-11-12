@@ -1,0 +1,14 @@
+- name: Configure App Image
+  hosts: all
+  become: true
+  tasks:
+    - name: Install Ruby
+      apt:
+        name: "{{list_of_packages}}"
+        force: yes
+        update_cache: yes
+      vars:
+        list_of_packages:
+        - ruby-full
+        - ruby-bundler
+        - build-essential
