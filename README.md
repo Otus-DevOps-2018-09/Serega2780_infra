@@ -2,6 +2,7 @@
 
 Serega2780 Infra repository
 
+
 Ansible-2
 
 Протестирован режим "один playbook - один сценарий" с переменными, handlers;
@@ -13,7 +14,6 @@ Provisioning в Packer с режима sh script изменен на Ansible pla
 Установлен/настроен gce.py;
 Изменен ansible.cfg так, чтобы использовать динамический inventory из gce.py, а не статический из inventory.yml;
 Созданы новые плейбуки site_dynamic.yml, db_dynamic.yml, app_dynamic.yml, deploy_dynamic.yml. Они используют имена виртуальных машин, полученных с помощью gce.py. Таким образом, теперь при пересоздании инфраструктуры с помощью Terraform и, как следствие, изменении внешних ip адресов, пропала необходимость каждый раз прописывать новые адреса в статический inventory.yml. Обращение плейбука происходит по имени машины, которое не меняется при перезапусках.
-
 
 Ansible-1
 
@@ -35,7 +35,6 @@ Terraform-2
 затем по веткам: stage и prod
 создавались buckets
 
-
 Terraform-1
 
 установлен terraform
@@ -43,12 +42,7 @@ Terraform-1
 определены и настроены input и output переменные
 с помощью terraform развернула ВМ из образа, на ней автоматически запещен сервис puma
 через web протестирован функционал сервиса puma
-=======
 
-Bastion
-
-bastion_IP = 35.189.195.32
-=======
 cloud-testapp
 testapp_IP = 35.233.40.230
 testapp_port = 9292
@@ -57,7 +51,7 @@ testapp_port = 9292
 с помощью gcloud создана ВМ
 написаны скрипты для установки Ruby, Mongodb, а также скрипт деплоя приложения
 
+Bastion
 
-=======
 bastion_IP = 35.189.195.32
 someinternalhost_IP = 10.132.0.3

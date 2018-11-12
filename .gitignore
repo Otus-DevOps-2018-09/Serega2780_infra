@@ -7,6 +7,4 @@ variables.json
 old/
 *.retry
 my-infra*
-
-
 *.old
