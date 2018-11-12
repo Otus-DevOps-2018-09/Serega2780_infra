@@ -2,6 +2,7 @@
 
 Serega2780 Infra repository
 
+
 Ansible-1
 
 Поскольку командой rm -rf ~/reddit удалили каталог reddit, при следующем запуске 
@@ -22,7 +23,6 @@ Terraform-2
 затем по веткам: stage и prod
 создавались buckets
 
-
 Terraform-1
 
 установлен terraform
@@ -30,12 +30,11 @@ Terraform-1
 определены и настроены input и output переменные
 с помощью terraform развернула ВМ из образа, на ней автоматически запещен сервис puma
 через web протестирован функционал сервиса puma
-=======
+
 
 Bastion
 
 bastion_IP = 35.189.195.32
-=======
 cloud-testapp
 testapp_IP = 35.233.40.230
 testapp_port = 9292
@@ -45,6 +44,25 @@ testapp_port = 9292
 написаны скрипты для установки Ruby, Mongodb, а также скрипт деплоя приложения
 
 
-=======
-bastion_IP = 35.189.195.32
+
 someinternalhost_IP = 10.132.0.3
+
+cloud-testapp
+testapp_IP = 35.233.40.230
+testapp_port = 9292
+
+установлен и настроен gcloud
+с помощью gcloud создана ВМ
+написаны скрипты для установки Ruby, Mongodb, а также скрипт деплоя приложения
+
+
+cloud-testapp
+
+testapp_IP = 35.233.40.230
+testapp_port = 9292
+
+установлен и настроен gcloud
+с помощью gcloud создана ВМ
+написаны скрипты для установки Ruby, Mongodb, а также скрипт деплоя приложения
+
+
