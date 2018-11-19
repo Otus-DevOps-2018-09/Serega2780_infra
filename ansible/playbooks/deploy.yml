@@ -1,0 +1,4 @@
+- name: Deploy Reddit
+  hosts: app
+  roles:
+    - deploy

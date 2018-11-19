@@ -4,6 +4,11 @@ variables.json
 *.tfstate.backup
 *.tfvars
 .terraform/
+*.retry
+my-infra*
+jdauphant.nginx
+*.old
+*.log
 old/
 *.retry
 my-infra*
