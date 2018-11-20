@@ -7,7 +7,8 @@
 	"Disk_type": "pd-standard",
 	"Disk_size": "10",
 	"Network": "default",
-	"Tags": ""
+    "Tags": "",
+    "Playbook_tags": "ruby"
   },
 	"builders": [
         {
@@ -29,7 +30,8 @@
     "provisioners": [
         {
             "type": "ansible",
-            "playbook_file": "ansible/playbooks/packer_app.yml"
+            "playbook_file": "ansible/playbooks/packer_app.yml",
+            "extra_arguments": ["--tags={{user `Playbook_tags`}}"]
         }
     ]
 }

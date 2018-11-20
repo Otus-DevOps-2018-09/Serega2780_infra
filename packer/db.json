@@ -7,7 +7,8 @@
 	"Disk_type": "pd-standard",
 	"Disk_size": "10",
 	"Network": "default",
-	"Tags": ""
+	"Tags": "",
+    "Playbook_tags": "install"
   },
 	"builders": [
         {
@@ -30,7 +31,8 @@
         
         {
             "type": "ansible",
-            "playbook_file": "ansible/playbooks/packer_db.yml"
+            "playbook_file": "ansible/playbooks/packer_db.yml",
+            "extra_arguments": ["--tags={{user `Playbook_tags`}}"]
         }
     ]
 }
