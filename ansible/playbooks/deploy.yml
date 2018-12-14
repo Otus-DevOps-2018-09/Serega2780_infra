@@ -1,4 +1,5 @@
 - name: Deploy Reddit
   hosts: app
+  become: true
   roles:
     - deploy

@@ -13,3 +13,11 @@ old/
 *.retry
 my-infra*
 *.old
+# Vagrant & molecule
+.vagrant/
+*.log*.pyc
+.molecule
+.cache
+.pytest_cache
+Pipfil*
+ansible-4/
